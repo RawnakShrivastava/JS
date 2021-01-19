@@ -20,18 +20,13 @@
 }
 .nav-left {
     flex: 1;
+    justify-content: flex-start;
 }
 .logo {
-    left : 250px;
+    left : 200px;
     position: absolute;
-    height: 70px;
-    width: 95px;
-}
-.text {
-    left :350px;
-    position: absolute;
-    height: 80px;
-    width: 145px;
+    height: 120px;
+    width: 280px;
 }
 .nav-right {
     flex: 1;
@@ -116,7 +111,6 @@ li > a:hover{
   
 }
 .line{
-    /* left : 51%; */
     color : #7dfaf2;
     position: relative;
 }
@@ -142,13 +136,7 @@ li > a:hover{
    
 }
 
-.btn{
-    /* position: absolute; */
-    top : 70px;
-    width: 50%;
-    /* left: 800px; */
-    height: 70px;
-}
+
 .section1-btn{
     border: none;
     background-color:#7dfaf2 ;
@@ -220,25 +208,11 @@ li > a:hover{
     height: 500px;
     opacity: 85%;
 }
-  /* .overlay::before{
-      background-color: aqua;
-      z-index: 1;
-      width: 100%;
-      height: 100px;
-  }
-  .overlay:hover{
-    -webkit-transition: all 1.2s cubic-bezier(0.79, 0.33, 0.14, 0.53);
-    transition: all 1.2s cubic-bezier(0.79, 0.33, 0.14, 0.53);    
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    background-color: blueviolet;
-  } */
   .album:hover{
     opacity: 100%;
 
   }
-  /* @media screen and (max-width: 100px) { 
+  @media screen and (max-width: 1070px) { 
     .main{
           max-width: 100%;
       }
@@ -267,10 +241,7 @@ li > a:hover{
         align-items: center;
     }
 
-
-    
-
-  } */
+  }
 
 
 
