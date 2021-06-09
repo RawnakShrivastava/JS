@@ -13,37 +13,46 @@
   <div class="main">
     <div class="container">
       <h1>Form</h1>
-      <form method="" class="form-main" id="form">
+      <form method="POST" class="form-main" id="form" name="user-form">
     
         <div class="form-item name  form-item-type-text" >
           <label for="">First Name*</label>
-        <input type="text" id="fname"></div>
+        <input type="text" id="fname" class="input" name="FirstName">
+        <span class="error" id = "error"><p id="FirstName_error"></p></span>
+      </div>
         
         <div class="form-item  form-item-type-text">
           <label>Last Name*</label>
-        <input type="text" id="lname"></div>
+        <input type="text" id="lname" class="input" name="LastName">
+        <span class="error" id = "error"><p id="LastName_error"></p></span>
+      </div>
   
-        
         <div class="form-item  form-item-type-text" >
           <label >Address</label>
-        <input type="text" id="address"></div>
+        <input type="text" id="address" class="input" name="Address">
+        <span class="error" id = "error"><p id="Address_error"></p></span>
+      </div>
         
         <div class="form-item  form-item-type-phone">
           <label>Phone Number *</label>
-        <input type="phone" id="phone"></div>
+        <input type="phone" id="phone" class="input" name="Phone">
+        <span class="error" id = "error"><p id="Phone_error"></p></span>
+      </div>
         
         <div class="form-item  form-item-type-email">
           <label>Email *</label>
-        <input type="email" id="email"></div>
+        <input type="email" id="email" class="input" name="Email">
+        <span class="error" id = "error"><p id="Email_error"></p></span>
+      </div>
 
         <div class="form-item  form-item-type-text" >
           <label >Password</label>
-          <input type="password" id="password">
+          <input type="password" id="password" class="input" name="Password">
         </div>
           
         <div class="form-item  form-item-type-text">
           <label >Confirm Password *</label>
-        <input type="password" id="name" ></div>
+          <input type="password" id="name" class="input" name="Password"></div>
     
         <div class="form-item  form-item-type-country">
             <label >Years of Experience </label>
@@ -55,20 +64,24 @@
         </div>
         <div class="form-item checkbox form-item-type-boolean form-item-type-checkbox choice">
           <label for="">How would you like us to cotact you?</label>
-          <label><input type="checkbox" id="checkbox-contact-ph" value="phone">Phone</label>
-          <label><input type="checkbox" id="checkbox-contact-em" value="email">Email</label>
+          <label><input type="checkbox" id="checkbox-contact-ph" value="phone" class="input" >Phone</label>
+          <label><input type="checkbox" id="checkbox-contact-em" value="email" class="input">Email</label>
         </div>
         <div class="form-item checkbox form-item-type-boolean form-item-type-checkbox">
-          <label><input type="checkbox" id="checkbox-1" value="yes">I have read and agree to the XYZ Privacy Policy</label>
+          <label><input type="checkbox" id="checkbox-1" value="yes" class="input" name="Agreement">I have read and agree to the XYZ Privacy Policy</label>
         </div>
         <div class="form-item">
           <label for="">Skills</label>
-          <textarea cols="" rows="" id="skills"></textarea>
+          <textarea cols="" rows="" id="skills" class="input" name="Skills"></textarea>
         </div>
         <div class="buttons">
-            <button type="button" onclick="ShowDetails()">REGISTER</button>
+            <button type="button" onclick="return ShowDetails()">REGISTER</button>
         </div>
         </form>
+
+        <div class="response" id="response">
+
+        </div>
     </div>
   </div>
 </body>

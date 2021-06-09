@@ -1,5 +1,7 @@
 // Formatted Data
 const ShowDetails = () => {
+    const formElements = document.getElementById("form").elements;
+    const formLength = document.getElementById("form").elements.length;
     const firstName = document.getElementById("fname").value ;
     const lastName = document.getElementById("lname").value ;
     const address = document.getElementById("address").value ;
@@ -9,28 +11,39 @@ const ShowDetails = () => {
     const skills = document.getElementById("skills").value ;
     const contactPhone = document.getElementById("checkbox-contact-ph").checked;
     const contactEmail = document.getElementById("checkbox-contact-em").checked;
-
     const agreement = document.getElementById("checkbox-1").checked ;
 
-    console.log( "First Name : " + `${firstName}`);
-    console.log( "last Name : " + `${lastName}`);
-    console.log( "Address : " + `${address}`);
-    console.log( "phone : " + `${phone}`);
-    console.log( "email : " + `${email}`);
-    console.log( "Years of Experience " +  `${yop}`);
-    console.log( "Agreement : " +  `${agreement}`);
-    console.log( "Prefered Phone : " +  `${contactPhone}`);
-    console.log( "Prefered Email: " +  `${contactEmail}`);
-    console.log( "Skills : " +  `${skills}`);
+    const user = {
+        Fullname : firstName + lastName,
+        address : address,
+        phone : phone,
+        email : email,
+        yop : yop,
+        skills : skills,
+        contactViaPhone : contactPhone,
+        contactViaEmail : contactEmail,
+        agreement : agreement
+    } 
 
-    const formElements = document.getElementById("form").elements;
-    const formLength = document.getElementById("form").elements.length;
-    for(var i = 0 ; i < formLength-1 ;i++){
-        formElements[i].value = '';
-    }
 
+        var mandatory = ['FirstName', 'LastName' ,'Phone', 'Email'];
+        var errorCount = 0;
+        mandatory.forEach(function(el) {
+        var val = document.forms["user-form"][el].value;
+        if (val == "") {
+            document.getElementById(el + '_error').textContent = el.toUpperCase().replace('_', ' ') + " must be filled out";
+            ++errorCount;
+        }   
+        })
+        if (errorCount) return false;
+        console.log(user);
+            console.log("Submitted...");
+            for(var i = 0 ; i < formLength-1 ;i++){
+                formElements[i].value = '';
+                document.getElementById("error").textContent = '';
+
+        }
 };
-
 // Show all fields at once
 
 // const ShowDetailsNew = () => {
@@ -41,5 +54,3 @@ const ShowDetails = () => {
 //         console.log(formElements[i].value);
 //     }
 // };
-
-
