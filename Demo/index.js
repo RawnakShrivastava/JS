@@ -1,52 +1,45 @@
-// Hoisting
-// var newrate = 2.0;
-// var rate = 3.0;
-// function getRate() {
-//   if (!rate) {
-//     var rate = newrate;
-//   }
-//   return rate;
-// }
+// Formatted Data
+const ShowDetails = () => {
+    const firstName = document.getElementById("fname").value ;
+    const lastName = document.getElementById("lname").value ;
+    const address = document.getElementById("address").value ;
+    const phone = document.getElementById("phone").value ;
+    const email = document.getElementById("email").value ;
+    const yop = document.getElementById("YOP").value ;
+    const skills = document.getElementById("skills").value ;
+    const contactPhone = document.getElementById("checkbox-contact-ph").checked;
+    const contactEmail = document.getElementById("checkbox-contact-em").checked;
 
-// console.log(getRate());
+    const agreement = document.getElementById("checkbox-1").checked ;
 
-console.log(a);
-let a = 10;
+    console.log( "First Name : " + `${firstName}`);
+    console.log( "last Name : " + `${lastName}`);
+    console.log( "Address : " + `${address}`);
+    console.log( "phone : " + `${phone}`);
+    console.log( "email : " + `${email}`);
+    console.log( "Years of Experience " +  `${yop}`);
+    console.log( "Agreement : " +  `${agreement}`);
+    console.log( "Prefered Phone : " +  `${contactPhone}`);
+    console.log( "Prefered Email: " +  `${contactEmail}`);
+    console.log( "Skills : " +  `${skills}`);
 
-//CALLBACK//
+    const formElements = document.getElementById("form").elements;
+    const formLength = document.getElementById("form").elements.length;
+    for(var i = 0 ; i < formLength-1 ;i++){
+        formElements[i].value = '';
+    }
 
-// const posts = [
-//   { title: "Post 1", body: "This is Post 1" },
-//   { title: "post 2", body: "This is post 2" },
-// ];
+};
 
-// const getPost = () => {
-//   setTimeout(() => {
-//     posts.forEach((post, index) => {
-//       console.log(`My post ${index + 1} ` + ": " + post.body);
-//     });
-//     console.log("Get Post Ends...");
-//   }, 2000);
+// Show all fields at once
+
+// const ShowDetailsNew = () => {
+//     const formElements = document.getElementById("form").elements;
+//     const formLength = document.getElementById("form").elements.length;
+//     console.log(formLength);
+//     for(var i = 0 ; i < formLength-1 ;i++){
+//         console.log(formElements[i].value);
+//     }
 // };
 
-// const createPost = (post, callback) => {
-//   setTimeout(() => {
-//     callback();
-//     posts.push(post);
-//     console.log("Create Post Ends...");
-//   }, 1000);
-// };
 
-// createPost({ title: "Post 3", body: "This is post 3" }, getPost);
-
-// //Promise
-// const createPostPromise = (post) => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       posts.push(post);
-//       resolve();
-//       console.log("Create Post Ends...");
-//     }, 1000);
-//   });
-// };
-// createPostPromise({ title: "Post 4", body: "This is post 4" }).then(getPost);

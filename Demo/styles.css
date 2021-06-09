@@ -1,0 +1,41 @@
+.container h1{
+    text-align: center;
+    padding: 2rem 0;
+}
+.container form{
+    background-color: #d9d1d1;
+    padding: 2rem 4rem;
+    border-radius: 12px;
+}
+form .form-item,
+form .buttons{
+    padding: 1rem;
+}
+form .form-item label{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-left: 4px;
+}
+form .form-item input,
+.form-item textarea,
+.form-item select{
+    width: 100%;
+    padding: 25px 40px;
+    outline: none;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
+.form-item-type-checkbox input{
+    width: auto !important;
+    margin-right: 10px;
+}   
+form .buttons button{
+    padding: 12px 40px;
+    background: #687070;
+    color : #fff;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
