@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <h1>Form</h1>
+      <form method="" class="form-main" id="form">
+    
+        <div class="form-item name  form-item-type-text" >
+          <label for="">First Name*</label>
+        <input type="text" id="fname"></div>
+        
+        <div class="form-item  form-item-type-text">
+          <label>Last Name*</label>
+        <input type="text" id="lname"></div>
+  
+        
+        <div class="form-item  form-item-type-text" >
+          <label >Address</label>
+        <input type="text" id="address"></div>
+        
+        <div class="form-item  form-item-type-phone">
+          <label>Phone Number *</label>
+        <input type="phone" id="phone"></div>
+        
+        <div class="form-item  form-item-type-email">
+          <label>Email *</label>
+        <input type="email" id="email"></div>
+
+        <div class="form-item  form-item-type-text" >
+          <label >Password</label>
+          <input type="password" id="password">
+        </div>
+          
+        <div class="form-item  form-item-type-text">
+          <label >Confirm Password *</label>
+        <input type="password" id="name" ></div>
+    
+        <div class="form-item  form-item-type-country">
+            <label >Years of Experience </label>
+          <select id="YOP">
+            <option value="0-2 years">0-2 years</option>
+            <option value="3-5 years">3-5 years</option>
+            <option value="5+ years">5+ years</option>
+          </select>
+        </div>
+        <div class="form-item checkbox form-item-type-boolean form-item-type-checkbox choice">
+          <label for="">How would you like us to cotact you?</label>
+          <label><input type="checkbox" id="checkbox-contact-ph" value="phone">Phone</label>
+          <label><input type="checkbox" id="checkbox-contact-em" value="email">Email</label>
+        </div>
+        <div class="form-item checkbox form-item-type-boolean form-item-type-checkbox">
+          <label><input type="checkbox" id="checkbox-1" value="yes">I have read and agree to the XYZ Privacy Policy</label>
+        </div>
+        <div class="form-item">
+          <label for="">Skills</label>
+          <textarea cols="" rows="" id="skills"></textarea>
+        </div>
+        <div class="buttons">
+            <button type="button" onclick="ShowDetails()">REGISTER</button>
+        </div>
+        </form>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
