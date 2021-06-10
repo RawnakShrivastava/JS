@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
   <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
@@ -13,50 +12,51 @@
   <div class="main">
     <div class="container">
       <h1>Form</h1>
-      <form method="POST" class="form-main" id="form" name="user-form">
+      <form class="form-main" id="form-main" name="user-form">
     
         <div class="form-item name  form-item-type-text" >
           <label for="">First Name*</label>
         <input type="text" id="fname" class="input" name="FirstName">
-        <span class="error" id = "error"><p id="FirstName_error"></p></span>
+        <!-- <span class="error" id = "error"><p id="FirstName_error"></p></span> -->
       </div>
         
         <div class="form-item  form-item-type-text">
           <label>Last Name*</label>
         <input type="text" id="lname" class="input" name="LastName">
-        <span class="error" id = "error"><p id="LastName_error"></p></span>
+        <!-- <span class="error" id = "error"><p id="LastName_error"></p></span> -->
       </div>
   
         <div class="form-item  form-item-type-text" >
           <label >Address</label>
         <input type="text" id="address" class="input" name="Address">
-        <span class="error" id = "error"><p id="Address_error"></p></span>
+        <!-- <span class="error" id = "error"><p id="Address_error"></p></span> -->
       </div>
         
         <div class="form-item  form-item-type-phone">
           <label>Phone Number *</label>
         <input type="phone" id="phone" class="input" name="Phone">
-        <span class="error" id = "error"><p id="Phone_error"></p></span>
+        <!-- <span class="error" id = "error"><p id="Phone_error"></p></span> -->
       </div>
         
         <div class="form-item  form-item-type-email">
           <label>Email *</label>
         <input type="email" id="email" class="input" name="Email">
-        <span class="error" id = "error"><p id="Email_error"></p></span>
+        <!-- <span class="error" id = "error"><p id="Email_error"></p></span> -->
       </div>
 
         <div class="form-item  form-item-type-text" >
           <label >Password</label>
-          <input type="password" id="password" class="input" name="Password">
+          <input type="password" id="password" class="input" id="passwword" name="Password">
         </div>
           
         <div class="form-item  form-item-type-text">
           <label >Confirm Password *</label>
-          <input type="password" id="name" class="input" name="Password"></div>
+          <input type="password" id="name" class="input" name="RPassword"></div>
     
         <div class="form-item  form-item-type-country">
             <label >Years of Experience </label>
-          <select id="YOP">
+          <select id="YOP" name="Experience">
+            <option value="0" selected = "0" disabled = "0">--SELECT--</option>
             <option value="0-2 years">0-2 years</option>
             <option value="3-5 years">3-5 years</option>
             <option value="5+ years">5+ years</option>
@@ -64,10 +64,10 @@
         </div>
         <div class="form-item checkbox form-item-type-boolean form-item-type-checkbox choice">
           <label for="">How would you like us to cotact you?</label>
-          <label><input type="checkbox" id="checkbox-contact-ph" value="phone" class="input" >Phone</label>
-          <label><input type="checkbox" id="checkbox-contact-em" value="email" class="input">Email</label>
+          <label><input type="checkbox" id="checkbox-contact-ph" value="phone" class="choice-phone" name="ChoicePhone" >Phone</label>
+          <label><input type="checkbox" id="checkbox-contact-em" value="email" class="choice-email" name="ChoiceEmail">Email</label>
         </div>
-        <div class="form-item checkbox form-item-type-boolean form-item-type-checkbox">
+        <div class="form-item checkbox form-item-type-boolean form-item-type-checkbox agreement">
           <label><input type="checkbox" id="checkbox-1" value="yes" class="input" name="Agreement">I have read and agree to the XYZ Privacy Policy</label>
         </div>
         <div class="form-item">
@@ -75,15 +75,16 @@
           <textarea cols="" rows="" id="skills" class="input" name="Skills"></textarea>
         </div>
         <div class="buttons">
-            <button type="button" onclick="return ShowDetails()">REGISTER</button>
+            <!-- <button type="button" onclick="ShowDetails()">REGISTER</button> -->
+            <button type="submit">REGISTER</button>
         </div>
         </form>
-
-        <div class="response" id="response">
-
         </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+  <script src="FormValidator.js"></script>
 </body>
-<script src="index.js"></script>
+
 </html>

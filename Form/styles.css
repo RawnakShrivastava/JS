@@ -43,8 +43,7 @@ form .buttons button{
 .buttons{
     text-align: center;
 }
-.form-item .error p{
-    margin-top: 5px;
+.error{
     color : #f43535;
     font-weight : 600;
 }
